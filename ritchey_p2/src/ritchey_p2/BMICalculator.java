@@ -111,43 +111,44 @@ private String catagory;
 		//this option is for using lbs and the first formula
 		if (decision == 2)
 		{
-		input1 = JOptionPane.showInputDialog("Enter height in inches");
-		height = Integer.parseInt(input1);
-		if (height <=0)
-		{
-			System.out.println("Invalid Entry");
-			return;
-		}
-		
-		input2 = JOptionPane.showInputDialog("Enter weight in pounds");
-		weight = Integer.parseInt(input2);  
-		
-		if (weight <=0)
-		{
-			System.out.println("Invalid Entry");
-			return;
-		}
-		double BMI = (weight * 703 / height / height);
-		        
-		System.out.printf("BMI = %.1f\n",BMI);
-		        
-		        if (BMI < 18.5) 
-		        {
+			input1 = JOptionPane.showInputDialog("Enter height in inches");
+			height = Integer.parseInt(input1);
+			
+				if (height <=0)
+				{
+					System.out.println("Invalid Entry");
+					return;
+				}
+			
+			input2 = JOptionPane.showInputDialog("Enter weight in pounds");
+			weight = Integer.parseInt(input2);  
+			
+				if (weight <=0)
+				{
+					System.out.println("Invalid Entry");
+					return;
+				}
+			double BMI = (weight * 703 / height / height);
+			        
+			System.out.printf("BMI = %.1f\n",BMI);
+	        
+				if (BMI < 18.5) 
+				{
 		            System.out.println("You are underweight");
 		        } 
-		        else if (BMI < 25) 
-		        {
-		            System.out.println("You are normal");
-		        } 
-		        else if (BMI < 30) 
-		        {
-		            System.out.println("You are overweight");
-		        } 
-		        else 
-		        {
-		            System.out.println("You are obese");
-		        }
-		    }
+				else if (BMI < 25) 
+				{
+				    System.out.println("You are normal");
+				} 
+				else if (BMI < 30) 
+				{
+				    System.out.println("You are overweight");
+				} 
+				else 
+				{
+				    System.out.println("You are obese");
+				}
+			}
 		// this option for using kg and the seconds formula
 		if (decision == 1)
 		{
@@ -173,22 +174,22 @@ private String catagory;
 			        
 			System.out.printf("BMI = %.1f\n",BMI);
 			        
-			        if (BMI < 18.5) 
-			        {
-			            System.out.println("You are underweight");
-			        } 
-			        else if (BMI < 25) 
-			        {
-			            System.out.println("You are normal");
-			        } 
-			        else if (BMI < 30) 
-			        {
-			            System.out.println("You are overweight");
-			        } 
-			        else 
-			        {
-			            System.out.println("You are obese");
-			        }
+			if (BMI < 18.5) 
+			{
+	            System.out.println("You are underweight");
+	        } 
+			else if (BMI < 25) 
+			{
+			    System.out.println("You are normal");
+			} 
+			else if (BMI < 30) 
+			{
+			    System.out.println("You are overweight");
+			} 
+			else 
+			{
+			    System.out.println("You are obese");
+			}
 		}
 		}
 		
