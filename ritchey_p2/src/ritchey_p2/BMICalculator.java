@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 public class BMICalculator {
 private String weight;
 private String height;
+private String bmi;
+private String catagory;
 
 //i have to read input from the user and determine their bmi
 	/*
@@ -85,6 +87,17 @@ private String height;
 	{ 
 		return height; 
 	} 
+	
+	public String getBmi() 
+	{ 
+		return this.bmi; 
+	}
+	
+	public String getBmiCatagory() 
+	{ 
+		return this.catagory; 
+	}
+	
 	//i have to create a main method
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -100,8 +113,20 @@ private String height;
 		{
 		input1 = JOptionPane.showInputDialog("Enter height in inches");
 		height = Integer.parseInt(input1);
+		if (height <=0)
+		{
+			System.out.println("Invalid Entry");
+			return;
+		}
+		
 		input2 = JOptionPane.showInputDialog("Enter weight in pounds");
 		weight = Integer.parseInt(input2);  
+		
+		if (weight <=0)
+		{
+			System.out.println("Invalid Entry");
+			return;
+		}
 		double BMI = (weight * 703 / height / height);
 		        
 		System.out.printf("BMI = %.1f\n",BMI);
@@ -128,8 +153,22 @@ private String height;
 		{
 			input3 = JOptionPane.showInputDialog("Enter height in meters");
 			height2 = Integer.parseInt(input3);
+			
+			if (height2 <=0)
+			{
+				System.out.println("Invalid Entry");
+				return;
+			}
+			
 			input4 = JOptionPane.showInputDialog("Enter weight in kilograms");
-			weight2 = Integer.parseInt(input4);			        
+			weight2 = Integer.parseInt(input4);	
+			
+			if (weight2 <=0)
+			{
+				System.out.println("Invalid Entry");
+				return;
+			}
+			
 			double BMI = (weight2/( height2 * weight2));
 			        
 			System.out.printf("BMI = %.1f\n",BMI);
