@@ -6,6 +6,7 @@ import ritchey_p1.Decrypter;
 //I could not get the application to work, my encrypt and decrypt files work correctly on their own
 
 
+@SuppressWarnings("unused")
 public class Application {
 	
 	public static void main(String[] args)
