@@ -85,7 +85,7 @@ private String height;
 	{ 
 		return height; 
 	} 
-	
+	//i have to create a main method
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String input1,input2,input3,input4,choice;
@@ -94,6 +94,8 @@ private String height;
 		
 		choice = JOptionPane.showInputDialog("Would you like to use kilograms or pounds for your calculation? \n Type 1 for kilograms or 2 for pounds");
 		decision = Integer.parseInt(choice);
+		
+		//this option is for using lbs and the first formula
 		if (decision == 2)
 		{
 		input1 = JOptionPane.showInputDialog("Enter height in inches");
@@ -121,7 +123,7 @@ private String height;
 		            System.out.println("You are obese");
 		        }
 		    }
-		
+		// this option for using kg and the seconds formula
 		if (decision == 1)
 		{
 			input3 = JOptionPane.showInputDialog("Enter height in meters");
